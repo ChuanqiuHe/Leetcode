@@ -1,6 +1,6 @@
 // https://leetcode.com/discuss/interview-question/1002811/Amazon-or-OA-20201-or-Fresh-Promotion
  
- import java.util.*;
+import java.util.*;
 
 class Main {
     private static int freshPromotion(String[][] codeList, String[] shopCart) {
@@ -21,9 +21,9 @@ class Main {
         // all elems in codeList show up, return 1 , else 0
         return codeIdx == codeList.length ? 1 : 0;
     }
-    
+
     private static  boolean rightOrder(String[] shopCart, int i, String[] order) {
-         //  check the codeList, make sure the fruits are in order.
+        //  check the codeList, make sure the fruits are in order.
         for (String s : order) {
             if (i < shopCart.length && (s.equals("anything") || shopCart[i].equals(s))){
                 i++;
@@ -35,8 +35,8 @@ class Main {
     }
 
     public static void main(String[] args) {
-        String[][] codeList = {{"apple", "apple"}, {"banana", "anything"," banana"}};
-        String[] shoppingCart = {"orange", "apple", "apple", "banana", "orange", "banana"};
+        String[][] codeList = {{"a", "a"}, {"b", "anything", "b"}};
+        String[] shoppingCart = {"o", "a", "a", "b", "orange", "b"};
 
         int res = new Main().freshPromotion(codeList, shoppingCart);
         System.out.println(res);
