@@ -1,4 +1,4 @@
- 题目： https://coda.io/d/Offer_dm5fzh3MwOp/OA1_suMAY#OA1_tua4n/r12
+ 题目： https://coda.io/d/Offer_dm5fzh3MwOp/OA1_suMAY#OA1_tua4n/r12  
  
  // "static void main" must be defined in a public class.
 public class Main {
