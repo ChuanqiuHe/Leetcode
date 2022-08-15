@@ -11,7 +11,7 @@ It's better to fill up armor, In order to achieve this goal , Of course, you sho
 If the level that loses the most blood loses more blood than armor, Then you can fill up armor; 
 If the level that loses the most blood loses less than armor, Then lose as much blood and make up as much .
 */
-、、、为了把补血包尽可能多用，就要在遇到最大伤害值的时候用掉（两者取min）、、、
+、、、为了把补血包尽可能多用，就要在遇到最大伤害值的时候用掉（两者取min）、、、// list<>解法 https://leetcode.com/playground/DFo4yDzt
 
 // "static void main" must be defined in a public class.
 public class Main {
