@@ -35,6 +35,5 @@ public class Main {
         System.out.println(countMaxOperations_14("fafeggeddefgfgef", "fg"));
         System.out.println(countMaxOperations_14("fafeggeddefgfgef", "efg"));
         System.out.println(countMaxOperations_14("fafeggeddefgfgef", "fe"));
-        
     }
 }
