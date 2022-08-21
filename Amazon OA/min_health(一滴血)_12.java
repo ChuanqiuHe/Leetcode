@@ -25,7 +25,7 @@ public class Main {
             maxblood = Math.max(maxblood, blood);
         }
         
-        return sum +1 - Math.min(maxblood, armor) ;
+        return sum +1 - Math.min(maxblood, armor) ;  // +1是因为最后要留一滴血
     }
     
     
