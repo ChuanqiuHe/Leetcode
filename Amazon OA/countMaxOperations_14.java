@@ -4,6 +4,9 @@
 其他链接： https://curly-oriole-764.notion.site/22ec8523c820410490092ace51489509?v=a65d5dfe1dae443385cd3bbd0aa3ce9a&p=10077d355be9474486b8ac8b842f079e&pm=s
 */
 
+// how many subset t in s
+// idea: count the freq of character in S; then min(freq char in t)
+
 // Idea: 用两个counter统计s和t的字母出现频率，然后遍历t的所有字母，找到s中出现次数/t中出现次数的最小值（向下取整）
 
 public class Main {
