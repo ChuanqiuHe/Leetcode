@@ -43,3 +43,47 @@ public class Main {
         System.out.println(getMinSum(arr3, 2));
     }
 }
+
+
+//  optimize: calculate the totalsum while get subSum.
+
+public class Main {
+    public static int getMinSum (int[] A, int k) {
+        int n = A.length;
+        int left = 0;
+        int right = 0;
+        int totalSum = 0; //  optimize: calculate the totalsum while get subSum.
+        int subsum = 0;
+        int max = Integer.MIN_VALUE;
+        while(right < n){
+            //expand window
+            while(right - left<k){
+                subsum += A[right];
+                totalSum += A[right];
+                right++;
+            }
+            if(subsum >= max){
+                max = subsum; 
+            }
+            // shrink the window
+            subsum -= A[left];  
+            left++;
+        }
+        
+        // totalSum
+        // int totalSum = 0;
+        // for(int num : A){
+        //     totalSum += num;
+        // }
+        return totalSum - max;
+    }
+    
+    public static void main(String[] args) {
+        int[] arr1 = { 6, 2, 1, 9, 8 };  // 6+2+1 = 9
+        int[] arr2 = { 7, 3, 6, 1 };  // 6+1 = 7
+        int[] arr3 = { 1, 4, 4, 6, 9, 4 }; // 1+4+4+4 = 13
+        System.out.println(getMinSum(arr1, 2));
+        System.out.println(getMinSum(arr2, 2));
+        System.out.println(getMinSum(arr3, 2));
+    }
+}
