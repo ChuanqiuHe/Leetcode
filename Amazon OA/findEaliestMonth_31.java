@@ -1,6 +1,7 @@
 
 // 股票stock[]切一刀，切在哪里时左半边Avg和右半边Avg的差值最小，注意数组0-index，返回月份要+1
 
+
 // https://curly-oriole-764.notion.site/22ec8523c820410490092ace51489509?v=a65d5dfe1dae443385cd3bbd0aa3ce9a&p=49829dd06006467996df67eb68603ea9&pm=s
 
 // Idea: prefix sum
