@@ -6,7 +6,7 @@
 public class Main {
     
     public static int[] chooseFleets(int[] wheels){
-        // 除2除不尽的，除4就更除不尽了，先剪枝
+        // 除2除不尽的，除4就更除不尽了 if/else
         for(int i = 0; i<wheels.length; i++){
             if(wheels[i] %2 !=0){
                 wheels[i] = 0;
