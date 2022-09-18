@@ -2,6 +2,7 @@
  // String在任意位置添加字符，组成多少个AZ
 
 // how to get the max possible: 
+
     
 /*
 A肯定要加在开头才能尽可能多的和后面的Z组成AZZ肯定要加在最后才能尽可能多的和前面的A组成AZ所以要比较的就是A+string和string+Z两种情况然后就是数有多少个AZ从前往后遍历新的string每遇到一个Z这个Z就能和前面n个A组成n个AZ所以就是要记录到这个Z为止总共有多少个A就行了
