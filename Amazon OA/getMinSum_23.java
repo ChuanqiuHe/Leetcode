@@ -87,3 +87,41 @@ public class Main {
         System.out.println(getMinSum(arr3, 2));
     }
 }
+
+
+// 别人的解法
+
+// 给一组数组，删掉连续k个元素，求剩下的最小和
+// Sliding window 转化成求k个连续的最大和
+// time On
+// space O1
+public class Main {
+    public static int delete_process_to_free_memo(int[] arr, int k) {
+        int maxSum = 0;
+        int sum = 0;
+        int total = 0;
+        int left = 0, right = 0;
+
+        while (right < arr.length) {
+            total += arr[right];
+            sum += arr[right];
+
+            if (right >= k - 1) {
+                maxSum = Math.max(maxSum, sum);
+                sum -= arr[left];
+                left++;
+            }
+            right++;
+        }
+        return total - maxSum;
+    }
+    
+    public static void main(String[] artg) {
+        int[] arr1 = { 6, 2, 1, 9, 8 };  // 6+2+1 = 9
+        int[] arr2 = { 7, 3, 6, 1 };  // 6+1 = 7
+        int[] arr3 = { 1, 4, 4, 6, 9, 4 }; // 1+4+4+4 = 13
+        System.out.println(delete_process_to_free_memo(arr1, 2));
+        System.out.println(delete_process_to_free_memo(arr2, 2));
+        System.out.println(delete_process_to_free_memo(arr3, 2));
+    }
+}
