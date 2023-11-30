@@ -1,0 +1,57 @@
+/*
+𝐌𝐕𝐏'𝐬 𝐢𝐧 𝐚𝐧 𝐀𝐫𝐫𝐚𝐲
+Given an array A of positive integers. Your task is to find the MVP's in the array. An element of array is considered MVP if it is greater than or equal to all the elements to its right side. The rightmost element is always a MVP.
+Input:
+n = 6
+A[] = {16,17,4,3,5,2} Output: 17 5 2
+Explanation:
+The first MVP is 17 as it is greater than all the elements to its right.
+Similarly, the next leader is 5 followed by 2.
+𝗖𝗼𝗻𝘀𝘁𝗿𝗮𝗶𝗻𝘁𝘀:-
+1 <= n <= 10^7
+0 <= Ai <= 10^7
+*/
+
+// Solution
+#include <iostream>
+#include <vector>
+#include <stack>
+
+using namespace std;
+vector<int> findMVP(int n, vector<int>& A){
+    stack<int> s;
+    vector<int> res;
+    if(n==0) return {};
+    if(n==1) {
+        return {A[n-1]};
+    }else{
+       int maxi = A[n-1];
+       std::cout << "max" << maxi << "\n";
+       for(int i = n-1; i>=0; i-- ){
+          if(A[i]>= maxi){
+            maxi = A[i];
+           s.push(maxi); 
+        }
+     } 
+    }
+    
+    while(!s.empty()){
+        int a = s.top();
+        s.pop();
+        res.push_back(a);
+    }
+    return res;
+}
+
+int main() {
+    vector<int>A = {17,17,17,3,5,2};
+    int n = A.size();
+    vector<int> result = findMVP(n, A);
+     // Output the result
+    for (int num : result) {
+        cout << num << " ";
+    }
+    cout << endl;
+    
+    return 0;
+}
